@@ -7,7 +7,7 @@ const http =  require('http');
 
 function requestController() {
     //logica de nuestra funcion
-    console.log("Recibimos una nueva peticion");
+    console.log("Hola mundo");
 
 }
 
