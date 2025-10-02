@@ -2,6 +2,7 @@
 //const -> variable que no cambia
 //let -> variable que puede cambiar
 //var -> variable que puede cambiar (no se usa mucho)
+require ('dotenv').config();
 
 const http =  require('http');
 
@@ -14,4 +15,9 @@ function requestController() {
 //Configuracion del servidor
 const server = http.createServer(requestController);
 
-server.listen(3000);
+const PORT = process.env.PORT ;
+
+server.listen(PORT, function () {
+    console.log(`Servidor escuchando en el puerto:` +PORT);
+});
+
